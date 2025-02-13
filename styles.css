@@ -20,6 +20,8 @@ body {
     z-index: 1;
     max-height: 90vh; /* Limit container height */
     overflow-y: auto; /* Add scroll if content overflows */
+    width: 90%; /* Limit container width */
+    margin: 0 auto; /* Center the container */
 }
 
 h1 {
@@ -86,7 +88,7 @@ button:hover {
 }
 
 .monkey-gif img {
-    width: 150px; /* Reduce the size of the GIF */
+    width: 100px; /* Further reduce the size of the GIF */
     height: auto;
     transition: transform 1s ease-in-out;
 }
@@ -105,7 +107,7 @@ button:hover {
     border: 1px solid #ff69b4;
     border-radius: 10px;
     background-color: #fff0f5;
-    max-height: 300px; /* Limit the height of the message box */
+    max-height: 200px; /* Further limit the height of the message box */
     overflow-y: auto; /* Add scroll if the message is too long */
 }
 
