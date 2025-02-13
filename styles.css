@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden; /* Prevent scrolling due to floating emojis */
 }
 
 .container {
@@ -15,10 +16,20 @@ body {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative; /* Ensure container is above floating emojis */
+    z-index: 1;
 }
 
-.hidden {
-    display: none;
+h1 {
+    color: #ff1493;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 button {
@@ -38,14 +49,73 @@ button:hover {
     background-color: #ff1493;
 }
 
-.typing-message {
-    font-size: 1.2em;
-    color: #333;
-    animation: typing 3s steps(40, end);
+.hidden {
+    display: none;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+#yesButton3 {
+    position: relative;
+}
+
+#finalStage img {
+    margin-top: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.jumping {
+    animation: jump 0.5s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* New Styles for Monkey Stage */
+.monkey-gif img {
+    width: 200px;
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+
+.slide-out {
+    transform: translateX(-100%);
+}
+
+.live-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    white-space: pre-wrap;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ff69b4;
+    border-radius: 10px;
+    background-color: #fff0f5;
+}
+
+/* Floating Emojis */
+.emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
 }
 
