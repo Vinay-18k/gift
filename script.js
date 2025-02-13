@@ -54,11 +54,12 @@ document.getElementById("noButton3").addEventListener("click", function() {
     document.getElementById("finalStage").classList.remove("hidden");
 });
 
-// Gift Button - Shows gift message without affecting the final stage
+// Gift Button - Works on both click and touch devices
 document.getElementById("giftButton").addEventListener("click", showGift);
 document.getElementById("giftButton").addEventListener("touchstart", showGift);
 
 function showGift(event) {
+    event.preventDefault(); // Prevent default behavior for touch devices
     event.stopPropagation(); // Prevents any unintended hiding of content
     document.getElementById("giftMessage").classList.remove("hidden");
 }
