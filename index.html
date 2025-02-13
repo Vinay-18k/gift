@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Intro Stage -->
+        <!-- Intro Section -->
         <div id="intro">
             <h1>Hello Best Friend!!!</h1>
             <p class="subtitle">Happy Valentine's Day without a Valentine. 😂</p>
@@ -53,26 +53,31 @@
                 <img src="https://media.giphy.com/media/l4FGpP4lxGGgK5CBW/giphy.gif" alt="Annoying Cat">
             </div>
             <p>You don’t need any Valentine because you have your best friend! ❤️</p>
-            <button id="teaseButton">🐵 Go To →</button>
-        </div>
-
-        <!-- Tease Stage -->
-        <div id="teaseStage" class="hidden stage">
-            <div class="cat-gif">
-                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnQ3Y3lmZW1ldG14cjdmcnVnMHBnMWJ4a3h3aTZ3YXduNW43YXZkMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rgbAtUv07WAW4/giphy.gif" alt="Teasing Monkey">
+            <button id="giftButton">🎁 Click Here →</button>
+            <div id="giftMessage" class="hidden">
+                <p class="pandi-text">"I am Pandi Pilla" 🐷</p>
+                <div class="cat-gif">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGJvN3JqendrMnliZXk0N2V5anVwNnZrYmtpZGVwejZjb3htbWoyYiZlcD12MV9pbnRlcm5naWZfYnlfaWQmY3Q9Zw/fnUk7NWX4X5o7lwcRr/giphy.gif" alt="Funny Cat">
+                </div>
+                <p class="disclaimer">* Say above exact message to Vinay for gift. 😜*</p>
+                <!-- Go To Button Added Here -->
+                <button id="goToButton">Go To</button>
             </div>
         </div>
 
-        <!-- Fresh Stage (Message) -->
-        <div id="freshStage" class="hidden stage">
-            <p class="typing-message">It’s not about the words. It’s not about the emojis. It’s not even about the chocolates 🍫 (or is it?). But somehow, it’s about you.</p>
-            <p class="typing-message">You’re the one who gets it. The one who decodes the chaos. The one who knows the moon 🌙 isn’t just a moon, and forever isn’t just a word.</p>
-            <p class="typing-message">So here’s to you, bestie— my cosmic co-conspirator. 💌</p>
-            <p class="typing-message">P.S. The chocolates 🍫🍫🍫? They’re not real. But the chaos? Oh, that’s 100% yours. 😉</p>
+        <!-- New Stage - Monkey Teasing -->
+        <div id="monkeyStage" class="hidden stage">
+            <div class="monkey-gif">
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnQ3Y3lmZW1ldG14cjdmcnVnMHBnMWJ4a3h3aTZ3YXduNW43YXZkMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rgbAtUv07WAW4/giphy.gif" alt="Teasing Monkey" class="slide-out">
+            </div>
+            <div id="liveMessage" class="live-message"></div>
         </div>
     </div>
 
-    <script src="/gift/script.js"></script>
+    <!-- Emoji Container -->
+    <div id="emojiContainer"></div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
 
