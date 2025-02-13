@@ -1,73 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day Prank</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Intro Section -->
-        <div id="intro">
-            <h1>Hello Best Friend!!!</h1>
-            <p class="subtitle">Happy Valentine's Day without a Valentine. 😂</p>
-            <button id="startButton">Click here for something</button>
-        </div>
+document.getElementById("startButton").addEventListener("click", function() {
+    document.getElementById("intro").classList.add("hidden");
+    document.getElementById("stage1").classList.remove("hidden");
+});
 
-        <!-- Stage 1 -->
-        <div id="stage1" class="hidden stage">
-            <div class="cat-gif">
-                <img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" alt="Cute Cat">
-            </div>
-            <p>Do you need a Valentine?</p>
-            <button id="yesButton">Yes</button>
-            <button id="noButton">No</button>
-        </div>
+// Stage 1 Buttons
+document.getElementById("yesButton").addEventListener("click", function() {
+    document.getElementById("stage1").classList.add("hidden");
+    document.getElementById("stage2").classList.remove("hidden");
+});
 
-        <!-- Stage 2 -->
-        <div id="stage2" class="hidden stage">
-            <div class="cat-gif">
-                <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cute Cat">
-            </div>
-            <p>Sorry...! Do you really need a Valentine?</p>
-            <button id="yesButton2">Yes</button>
-            <button id="noButton2">No</button>
-        </div>
+document.getElementById("noButton").addEventListener("click", function() {
+    document.getElementById("stage1").classList.add("hidden");
+    document.getElementById("finalStage").classList.remove("hidden");
+});
 
-        <!-- Stage 3 -->
-        <div id="stage3" class="hidden stage">
-            <div class="cat-gif">
-                <img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif" alt="Cute Cat">
-            </div>
-            <p>Shut up! That's not possible. Listen to me, you don't need a Valentine...</p>
-            <p>So now, do you really need one?</p>
-            <button id="yesButton3" class="jumping">Yes</button>
-            <button id="noButton3">No</button>
-        </div>
+// Stage 2 Buttons
+document.getElementById("yesButton2").addEventListener("click", function() {
+    document.getElementById("stage2").classList.add("hidden");
+    document.getElementById("stage3").classList.remove("hidden");
+});
 
-        <!-- Final Stage -->
-        <div id="finalStage" class="hidden stage">
-            <div class="cat-gif">
-                <img src="https://media.giphy.com/media/l4FGpP4lxGGgK5CBW/giphy.gif" alt="Annoying Cat">
-            </div>
-            <p>You don’t need any Valentine because you have your best friend! ❤️</p>
-            <button id="giftButton">🎁 Click Here →</button>
-        </div>
+document.getElementById("noButton2").addEventListener("click", function() {
+    document.getElementById("stage2").classList.add("hidden");
+    document.getElementById("finalStage").classList.remove("hidden");
+});
 
-        <!-- Gift Message -->
-        <div id="giftMessage" class="hidden">
-            <p class="pandi-text">"I am Pandi Pilla" 🐷</p>
-            <div class="cat-gif">
-                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGJvN3JqendrMnliZXk0N2V5anVwNnZrYmtpZGVwejZjb3htbWoyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fnUk7NWX4X5o7lwcRr/giphy.gif" alt="Funny Cat">
-            </div>
-            <p class="disclaimer">* Say above message to Vinay for gift. 😜*</p>
-        </div>
-    </div>
+// Stage 3 - Only "No" button should work
+document.getElementById("noButton3").addEventListener("click", function() {
+    document.getElementById("stage3").classList.add("hidden");
+    document.getElementById("finalStage").classList.remove("hidden");
+});
 
-    <!-- Floating Emoji Container -->
-    <div id="emojiContainer"></div>
-    
-    <script src="script.js"></script>
-</body>
-</html>
+// Tease Button
+document.getElementById("teaseButton").addEventListener("click", function() {
+    document.getElementById("finalStage").classList.add("hidden");
+    document.getElementById("teaseStage").classList.remove("hidden");
+
+    setTimeout(() => {
+        document.getElementById("teaseStage").classList.add("hidden");
+        document.getElementById("freshStage").classList.remove("hidden");
+    }, 1000);
+});
+
