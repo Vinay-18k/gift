@@ -13,11 +13,13 @@ body {
 
 .container {
     background-color: white;
-    padding: 30px;
+    padding: 20px; /* Reduced padding */
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     position: relative; /* Ensure container is above floating emojis */
     z-index: 1;
+    max-height: 90vh; /* Limit container height */
+    overflow-y: auto; /* Add scroll if content overflows */
 }
 
 h1 {
@@ -78,8 +80,13 @@ button:hover {
 }
 
 /* New Styles for Monkey Stage */
+.monkey-gif {
+    text-align: center; /* Center the GIF */
+    margin-top: 20px; /* Add some space above the GIF */
+}
+
 .monkey-gif img {
-    width: 200px;
+    width: 150px; /* Reduce the size of the GIF */
     height: auto;
     transition: transform 1s ease-in-out;
 }
@@ -98,6 +105,8 @@ button:hover {
     border: 1px solid #ff69b4;
     border-radius: 10px;
     background-color: #fff0f5;
+    max-height: 300px; /* Limit the height of the message box */
+    overflow-y: auto; /* Add scroll if the message is too long */
 }
 
 /* Floating Emojis */
